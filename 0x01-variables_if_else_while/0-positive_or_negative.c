@@ -6,7 +6,7 @@
 
 
 /**
- * main - Print whether the number stored in the variable n is positive or negative
+ * main - Prints the number stored in the variable n is positive or negative
  * Return: 0
  *
  */
@@ -14,7 +14,7 @@ int main(void)
 {
 int n;
 
-$rand(time(0));
+srand(time(0));
 n = rand() - RAND_MAX / 2;
 
 if (n > 0)
