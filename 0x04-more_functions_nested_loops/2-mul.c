@@ -1,4 +1,4 @@
-#include "main.h'
+#include "main.h"
 
 /**
 * mul - multiply 2 integers
@@ -9,5 +9,5 @@
 
 int mul(int a, int b)
 {
-return (a * b)
+return (a * b);
 }
