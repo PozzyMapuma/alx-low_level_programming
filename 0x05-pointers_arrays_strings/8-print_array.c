@@ -7,6 +7,7 @@
  * @n: length of the array
  *
  */
+
 void print_array(int *a, int *n);
 {
 int i;
