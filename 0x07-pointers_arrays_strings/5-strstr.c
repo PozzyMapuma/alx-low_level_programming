@@ -3,24 +3,30 @@
  * _strstr - entry point
  * @haystack: input
  * @needle: input
- * Return: 0
+ * Return: if the substring is located - pointer to beginning
+ * if the substring is not located - NULL
  */
 char *_strstr(char *haystack, char *needle)
 {
-	for (; *haystack != '\0'; haystack++)
+	int index;
+
+	if (*needle == 0)
+		return (haystack);
+
+	while (*haystack)
 	{
-		char *one = haystack;
-		char *p = needle;
+		index = 0;
 
-		while (one == *p && *p != '\0')
+		if (haystack[index] == needle[index])
 		{
-			one++;
-			p++;
+			do {
+				if (needle[index + 1] == '\0')
+					return (haystack);
+				index++;
+
+			} while (haystack[index] == needle[index]);
 		}
-
-		if (*p == '\0')
-			return (haystack);
+		haystack++;
 	}
-
-	return (0);
+	return ('\0');
 }
